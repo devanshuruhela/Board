@@ -1,3 +1,5 @@
+import AuthContext from './context/AuthContext';
+import ToasterContext from './context/toastContext';
 import './globals.css'
 import { Montserrat } from "next/font/google";
 
@@ -15,7 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={montserrat.className}>{children}</body>
+      <body className={montserrat.className}>
+        <AuthContext>
+          <ToasterContext />
+          {children}
+        </AuthContext>
+      </body>
     </html>
-  )
+  );
 }

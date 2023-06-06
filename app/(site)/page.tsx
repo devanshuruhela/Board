@@ -8,13 +8,14 @@ export default function Auth() {
           Board.
         </p>
       </div>
-      <div className="bg-gray-300 w-[65%] flex items-center justify-center flex-col">
+      <div className="bg-[#F5F5F5] w-[65%] flex items-center justify-center flex-col">
         <LoginForm />
         <div className="flex flex-row gap-2 mt-5">
-          <p className="text-[12px] text-[#858585]">
-            Don’t have an account?
+          <p className="text-[12px] text-[#858585]">Don’t have an account?</p>
+          <p className="text-[12px] cursor-pointer text-[#346BD4]">
+            {" "}
+            Register here
           </p>
-          <p className="text-[12px] cursor-pointer text-[#346BD4]"> Register here</p>
         </div>
       </div>
     </div>
