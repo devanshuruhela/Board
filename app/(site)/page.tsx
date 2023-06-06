@@ -11,10 +11,10 @@ export default function Auth() {
       <div className="bg-gray-300 w-[65%] flex items-center justify-center flex-col">
         <LoginForm />
         <div className="flex flex-row gap-2 mt-5">
-          <p className="text-[16px] text-[#858585]">
+          <p className="text-[12px] text-[#858585]">
             Don’t have an account?
           </p>
-          <p className="text-[16px] cursor-pointer text-[#346BD4]"> Register here</p>
+          <p className="text-[12px] cursor-pointer text-[#346BD4]"> Register here</p>
         </div>
       </div>
     </div>
