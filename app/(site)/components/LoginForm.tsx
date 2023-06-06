@@ -25,7 +25,7 @@ const LoginForm = () => {
           }
 
           if (callback?.ok) {
-            router.push("/");
+            router.push("/dashboard");
           }
         })
         .finally(() => setIsLoading(false));
@@ -33,7 +33,7 @@ const LoginForm = () => {
     
    useEffect(() => {
      if (session?.status === "authenticated") {
-       router.push("/");
+       router.push("/dashboard");
      }
    }, [session?.status, router]);
   return (
