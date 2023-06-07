@@ -3,16 +3,25 @@ import { getSession, signOut, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Sidebar from './components/sidebar'
 import React from 'react'
+import DashboardContent from './dashboard'
 
 const Dashboard = () => {
   const session  = useSession()
   const router  = useRouter()
   if(session?.status === 'authenticated')
   {return (
-    // <div>Dashboard <button onClick={()=>signOut()}>Logout</button></div>
-    <Sidebar/>
-    
-  )}
+    <div className="bg-[#F5F5F5] ">
+      {/* <button onClick={()=>signOut()}>Logout</button> */}
+      <div className="grid min-h-screen grid-cols-4">
+        <div className="col-span-1">
+          <Sidebar />
+        </div>
+        <div className="col-span-3 mt-10 mr-10">
+          <DashboardContent />
+        </div>
+      </div>
+    </div>
+  );}
   else{
     return(
     
