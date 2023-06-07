@@ -23,6 +23,6 @@
       "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/dashboard/components/sidebar.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "app/dashboard/components/sidebar.tsx", "app/dashboard/components/charts/productchart.tsx", "app/dashboard/components/charts/acitivitychart.tsx"],
   "exclude": ["node_modules"]
 }

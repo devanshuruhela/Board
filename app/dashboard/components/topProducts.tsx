@@ -1,8 +1,8 @@
 import React from 'react'
-
+import ProductCharts from './charts/productchart'
 const TopProducts = () => {
   return (
-    <div>TopProducts</div>
+    <div><ProductCharts/></div>
   )
 }
 

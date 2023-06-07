@@ -12,11 +12,11 @@ const Dashboard = () => {
   {return (
     <div className="bg-[#F5F5F5] ">
       {/* <button onClick={()=>signOut()}>Logout</button> */}
-      <div className="grid min-h-screen grid-cols-4">
+      <div className="grid min-h-screen grid-cols-5">
         <div className="col-span-1">
           <Sidebar />
         </div>
-        <div className="col-span-3 mt-10 mr-10">
+        <div className="col-span-4 mt-10 ml-5 mr-10">
           <DashboardContent />
         </div>
       </div>

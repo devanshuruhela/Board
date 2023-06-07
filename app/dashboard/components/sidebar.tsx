@@ -19,7 +19,7 @@ function SideNavbar() {
           />
         </Disclosure.Button>
        
-        <div className="fixed top-0 z-20 w-1/2 h-[90vh] pl-2 pt-5 pr-5 m-10 duration-200 ease-out delay-150 bg-black -left-96 lg:left-0 lg:w-60 peer-focus:left-0 peer:transition  rounded-[30px]">
+        <div className="fixed top-0 z-20 w-1/2 h-[90vh] pl-2 pt-5 pr-5 my-10 ml-10 mr-1 duration-200 ease-out delay-150 bg-black -left-96 lg:left-0 lg:w-60 peer-focus:left-0 peer:transition  rounded-[30px]">
        <div className="flex flex-col justify-between">
           <div className="flex flex-col justify-start item-center">
             <p className="w-full pb-2 pl-4 font-[700] text-[36px]  text-white cursor-pointer">

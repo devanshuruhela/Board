@@ -12,7 +12,12 @@ const DashboardContent = () => {
     <div  className='grid grid-rows-6'>
       <div className='row-span-1'><DetailCards/></div>
       <div className='row-span-3'><Activity/></div>
-      <div className='row-span-2'><TopProducts/></div>
+      <div className='row-span-2'>
+        <div className='grid grid-cols-2'>
+          <TopProducts/>
+          <Schedule/>
+        </div>
+      </div>
     </div>
     </div>
   )
