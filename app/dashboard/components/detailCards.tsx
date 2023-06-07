@@ -6,7 +6,7 @@ const DetailCards = () => {
   
   return (
     <div>
-      <div className='grid grid-cols-4 gap-8 mt-5'>
+      <div className='grid grid-cols-4 gap-5 mt-5'>
       {cardData.map((card:any) => (
       
         <DetailCard key={card.id}
