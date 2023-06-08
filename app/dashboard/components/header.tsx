@@ -4,6 +4,7 @@ import {AiOutlineSearch} from 'react-icons/ai'
 import {BiBell} from 'react-icons/bi'
 import { useSession } from 'next-auth/react'
 import Image from 'next/image'
+import LogoutPopup from './logout'
 
 const Header = () => {
   const session = useSession();
@@ -27,17 +28,7 @@ const Header = () => {
           <div className='mt-2'>
             <BiBell  size={15} />
           </div>
-          <div className="overflow-hidden rounded-full">
-            <Image
-              src={
-                "https://lh3.googleusercontent.com/a/AAcHTtfbci1LdYQBjow8ucixE56ViIoLtRAi1czmMyh1=s96-c"
-              }
-              alt="Profile"
-              width={15}
-              height={15}
-              className="object-cover w-full h-full"
-            />
-          </div>
+         <LogoutPopup/>
         </div>
       </div>
     </>
