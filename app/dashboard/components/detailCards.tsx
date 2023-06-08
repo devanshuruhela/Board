@@ -6,18 +6,17 @@ const DetailCards = () => {
   
   return (
     <div>
-      <div className='grid grid-cols-4 gap-5 mt-5'>
-      {cardData.map((card:any) => (
-      
-        <DetailCard key={card.id}
-          title={card.title}
-          number={card.numbers}
-          icon={card.icon}
-          color={card.color}
-        />
-      
-      ))}
-    </div>
+      <div className="flex flex-col gap-5 mt-5 md:grid md:grid-cols-4 md:flex-row">
+        {cardData.map((card: any) => (
+          <DetailCard
+            key={card.id}
+            title={card.title}
+            number={card.numbers}
+            icon={card.icon}
+            color={card.color}
+          />
+        ))}
+      </div>
     </div>
   );
 }

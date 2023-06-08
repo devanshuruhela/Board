@@ -4,7 +4,7 @@ import ProductCharts from './charts/productchart'
 import { RxDotFilled } from 'react-icons/rx';
 const TopProducts = () => {
   return (
-    <div className="flex flex-col gap-21 p-6 bg-white rounded-[20px]">
+    <div className="flex flex-col gap-21 px-6 pt-6 pb-0 bg-white rounded-[20px]">
       <div className="flex flex-row justify-between">
         <p className="text-[18px] font-[700]">Top Products</p>
         <p className="text-[12px] text-[#858585]">May - June 2021</p>

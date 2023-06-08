@@ -1,4 +1,8 @@
-import React from "react";
+'use client'
+import React, { useEffect, useState } from "react";
+import "dotenv/config";
+
+
 import {
   LineChart,
   Line,
@@ -8,30 +12,27 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import axios from "axios";
 
 const ActivityChart = () => {
-  const data = [
-    {
-      name: "Week 1",
-      guest: 200,
-      user: 100,
-    },
-    {
-      name: "Week 2",
-      guest: 400,
-      user: 430,
-    },
-    {
-      name: "Week 3",
-      guest: 200,
-      user: 150,
-    },
-    {
-      name: "Week 4",
-      guest: 220,
-      user: 180,
-    },
-  ];
+  const [data, setData] = useState([]);
+ const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          `${process.env.NEXT_PUBLIC_API_KEY}/api/activity`
+        );
+        
+        
+        setData(response.data);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+  useEffect(() => {
+   
+
+    fetchData();
+  }, []);
 
   return (
     <div style={{ width: "100%", height: "200px" }}>

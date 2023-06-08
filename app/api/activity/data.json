@@ -1,0 +1,27 @@
+
+[
+    {
+      "key":1,
+      "name": "Week 1",
+      "guest": 200,
+      "user": 100
+    },
+    {
+      "key":2,
+      "name": "Week 2",
+     "guest": 400,
+      "user": 430
+    },
+    {
+     "key":3,
+      "name": "Week 3",
+      "guest": 200,
+      "user": 150
+    },
+    {
+      "key":4,
+      "name": "Week 4",
+      "guest": 220,
+      "user": 180
+    }
+  ]

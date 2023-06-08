@@ -2,7 +2,7 @@ import React from 'react'
 
 const Schedule = () => {
   return (
-    <div className="flex flex-col gap-2 p-6  bg-white rounded-[20px]">
+    <div className="flex flex-col gap-2 px-6 pt-6 pb-0  bg-white rounded-[20px]">
       <div className="flex flex-row justify-between">
         <p className="text-[18px] font-[700]">Today’s schedule</p>
         <p className="text-[#858585] text-[12px]">See All &rarr;</p>
