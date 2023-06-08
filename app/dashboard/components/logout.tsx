@@ -1,12 +1,19 @@
 'use client';
 
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
 
 const LogoutPopup = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const imageUrl = "https://lh3.googleusercontent.com/a/AAcHTtfbci1LdYQBjow8ucixE56ViIoLtRAi1czmMyh1=s96-c"
+  
+  const session = useSession();
 
+  
+  
+  
   const handleLogout = () => {
     signOut()
   };
@@ -18,7 +25,7 @@ const LogoutPopup = () => {
         onClick={() => setShowPopup(true)}
       >
         <Image
-          src="https://lh3.googleusercontent.com/a/AAcHTtfbci1LdYQBjow8ucixE56ViIoLtRAi1czmMyh1=s96-c"
+          src={session?.data?.user?.image || imageUrl}
           alt="Profile"
           width={20}
           height={20}
