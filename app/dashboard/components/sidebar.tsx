@@ -62,8 +62,20 @@ function SideNavbar() {
               className="flex flex-col gap-2 mb-10 ml-5 "
               style={{ marginTop: "calc(100vh - 32rem)" }}
             >
-              <p className="text-white text-[14px] cursor-pointer">Help</p>
-              <p className="text-white text-[14px] cursor-pointer">
+              <p
+                className="text-white text-[14px] cursor-pointer hover:font-[700]"
+                onClick={() =>
+                  (window.location.href = "mailto:support@listed.fan")
+                }
+              >
+                Help
+              </p>
+              <p
+                className="text-white text-[14px] cursor-pointer hover:font-[700]"
+                onClick={() =>
+                  (window.location.href = "mailto:nj@listed.fans")
+                }
+              >
                 Contact Us
               </p>
             </div>
