@@ -1,9 +1,11 @@
 'use client'
-import { useSession } from 'next-auth/react'
+import { getSession, useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import Sidebar from './components/sidebar'
 import React from 'react'
-import DashboardContent from './dashboard'
+import DashboardContent from './components/dashboard'
+import Link from 'next/link'
+import Loader from '../components/Loader'
 
 const Dashboard = () => {
   const session  = useSession()
@@ -22,14 +24,38 @@ const Dashboard = () => {
       </div>
     </div>
   );}
-  else{
+  
+   if (session?.status === "unauthenticated") {
+     router.push("/");
+   }
+
+   if(session?.status === "loading")
+   {
     return(
-    
-      router.push('/')
+      <div><Loader/></div>
     )
-  }
+   }
   
 }
 
 export default Dashboard
+
+export const getServerSideProps = async(context:any) =>
+{
+  
+  const session =await getSession(context);
+
+  if(!session)
+  {
+    return {
+      redirect: {
+ 
+        destination: "/",
+      },
+    };
+  }
+  return{
+    props:{session}
+  }
+}
 

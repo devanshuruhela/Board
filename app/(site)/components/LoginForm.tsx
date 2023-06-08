@@ -1,4 +1,5 @@
-"use client";
+
+'use client';
 
 import React, { useEffect, useState } from 'react'
 import SocialButton from './SocialButtons'
@@ -8,6 +9,7 @@ import {FaApple} from 'react-icons/fa'
 import {useSession , signIn , signOut} from 'next-auth/react'
 import { useRouter } from 'next/navigation';
 import { toast } from "react-hot-toast";
+
 
 const LoginForm = () => { 
   
@@ -35,8 +37,10 @@ const LoginForm = () => {
      if (session?.status === "authenticated") {
        router.push("/dashboard");
      }
+     
    }, [session?.status, router]);
   return (
+ 
     <div className="flex flex-col justify-start">
       <div className="flex flex-col gap-2">
         <p className="font-[700] text-black text-[36px] leading-[44px]">

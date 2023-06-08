@@ -1,9 +1,10 @@
+'use client'
 import React from "react";
-import Header from "./components/header";
-import DetailCards from "./components/detailCards";
-import Activity from "./components/activity";
-import TopProducts from "./components/topProducts";
-import Schedule from "./components/schedule";
+import Header from "./header";
+import DetailCards from "./detailCards";
+import Activity from "./activity";
+import TopProducts from "./topProducts";
+import Schedule from "./schedule";
 
 const DashboardContent = () => {
   return (

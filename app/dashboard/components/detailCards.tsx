@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import DetailCard from './DetailCard'
 import {cardData} from '../../data/carddata'
